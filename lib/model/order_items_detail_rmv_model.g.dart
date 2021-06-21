@@ -1,0 +1,47 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'order_items_detail_rmv_model.dart';
+
+// **************************************************************************
+// StoreGenerator
+// **************************************************************************
+
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+
+mixin _$OrderItemsDetailRmvModel on _OrderItemsDetailRmvModel, Store {
+  final _$checkAtom = Atom(name: '_OrderItemsDetailRmvModel.check');
+
+  @override
+  bool get check {
+    _$checkAtom.reportRead();
+    return super.check;
+  }
+
+  @override
+  set check(bool value) {
+    _$checkAtom.reportWrite(value, super.check, () {
+      super.check = value;
+    });
+  }
+
+  final _$_OrderItemsDetailRmvModelActionController =
+      ActionController(name: '_OrderItemsDetailRmvModel');
+
+  @override
+  dynamic setCheck(bool value) {
+    final _$actionInfo = _$_OrderItemsDetailRmvModelActionController
+        .startAction(name: '_OrderItemsDetailRmvModel.setCheck');
+    try {
+      return super.setCheck(value);
+    } finally {
+      _$_OrderItemsDetailRmvModelActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  String toString() {
+    return '''
+check: ${check}
+    ''';
+  }
+}

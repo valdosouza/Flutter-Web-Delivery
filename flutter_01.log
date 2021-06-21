@@ -1,0 +1,79 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d chrome --web-port=8080
+
+## exception
+
+StateError: Bad state: Cannot add event after closing
+
+```
+#0      _StreamController.add (dart:async/stream_controller.dart:623:24)
+#1      _StreamSinkWrapper.add (dart:async/stream_controller.dart:900:13)
+#2      AppConnection.runMain (package:dwds/src/connections/app_connection.dart:31:22)
+#3      _ResidentWebRunner.attach (package:flutter_tools/src/isolated/resident_web_runner.dart:825:41)
+<asynchronous suspension>
+#4      _ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:545:16)
+<asynchronous suspension>
+#5      _ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart)
+#6      asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:32)
+#7      _rootRun (dart:async/zone.dart:1190:13)
+#8      _CustomZone.run (dart:async/zone.dart:1093:19)
+#9      _runZoned (dart:async/zone.dart:1630:10)
+#10     runZonedGuarded (dart:async/zone.dart:1618:12)
+#11     runZoned (dart:async/zone.dart:1547:12)
+#12     asyncGuard (package:flutter_tools/src/base/async_guard.dart:109:3)
+#13     _ResidentWebRunner.run (package:flutter_tools/src/isolated/resident_web_runner.dart:496:20)
+#14     _rootRunUnary (dart:async/zone.dart:1198:47)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#16     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#17     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#18     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#19     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#20     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#21     _rootRun (dart:async/zone.dart:1190:13)
+#22     _CustomZone.run (dart:async/zone.dart:1093:19)
+#23     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#24     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#25     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#26     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#27     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#28     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 1.23.0-18.1.pre, on Microsoft Windows [versÃ£o 10.0.18363.1139], locale pt-BR)
+    • Flutter version 1.23.0-18.1.pre at d:\flutter
+    • Framework revision 198df796aa (4 weeks ago), 2020-10-15 12:04:33 -0700
+    • Engine revision 1d12d82d9c
+    • Dart version 2.11.0 (build 2.11.0-213.1.beta)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    • Android SDK at D:\Android\Sdk
+    • Platform android-29, build-tools 29.0.2
+    • Java binary at: D:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[✓] Android Studio (version 3.5)
+    • Android Studio at D:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+
+[✓] Connected device (3 available)
+    • Web Server (web) • web-server • web-javascript • Flutter Tools
+    • Chrome (web)     • chrome     • web-javascript • Google Chrome 86.0.4240.183
+    • Edge (web)       • edge       • web-javascript • Microsoft Edge 86.0.622.63
+
+• No issues found!
+```
